@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+<bean id="interpreteEspanol" class="beans.InterpreteEspanol" />
+<bean id="interpreteIngles" class="beans.InterpreteIngles" />
+<bean id="interpreteRuso" class="beans.InterpreteRuso" />
+<bean id="interpreteFrancia" class="beans.InterpreteFrancia" />
+<bean id="interpreteAllegos" class="beans.InterpreteAllegos" />
+
+<bean id="traductorEspanol" class="beans.Traductor">
+<property name="interprete" ref="interpreteEspanol" />
+<property name="nombre" value="Lenin Lemus" />
+</bean>
+<bean id="traductorIngles" class="beans.Traductor">
+<property name="interprete" ref="interpreteIngles" />
+<property name="nombre" value="Guillermo Cortina" />
+</bean>
+<bean id="traductorRuso" class="beans.Traductor">
+<property name="interprete" ref="interpreteRuso" />
+<property name="nombre" value="Alex Manzo" />
+</bean>
+<bean id="traductorFrancia" class="beans.Traductor">
+<property name="interprete" ref="interpreteFrancia" />
+<property name="nombre" value="Yazmin Olguin" />
+</bean>
+<bean id="traductorAllego" class="beans.Traductor">
+<property name="interprete" ref="interpreteAllegos" />
+<property name="nombre" value="Alex Yazmin Manzo Olguin" />
+</bean>
+
+
+</beans>
